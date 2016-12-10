@@ -1,0 +1,42 @@
+$def with (result)
+<html>
+<head>
+        <title>Nuevo</title>
+        <link href="static/css/estilo2.css" media="screen" rel="StyleSheet" type="text/css">
+    </head>
+    <body>
+            <h1 class="tr1">
+        Lista de Equipos</h1>
+<table class="tabla">
+   
+    <tr >
+       
+    <th class="tr1">
+        Equipo
+    </th>
+    <th class="tr1">
+        PJ
+    </th>
+    <th class="tr1">
+        Puntos
+    </th>
+    
+       
+</tr>
+    $for row in result:
+    <tr>
+     <td class="tr1">$row.nombre_eq</td>
+     <td class="tr1">$row.partidosj</td>
+      <td class="tr1">$row.puntos</td>
+      <td ><a  href="/ver/$row.id_equipo"> <input id="botonVer" type="submit" value="Ver" /></a>  </td>
+          <td> <a href="/editar/$row.id_equipo"> <input id="botonVer" type="submit" value="Editar" /></a>  </td>
+           <td><a href="/eliminar/$row.id_equipo"><input id="botonVer" type="submit" value="Eliminar" /></a> </td>
+    </tr>
+   
+</table>
+
+        <form name="main" method="post"> 
+<input type="submit" value="Nuevo" id="boton"/>   </form>
+    </body>
+
+</html>

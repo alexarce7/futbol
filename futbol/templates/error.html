@@ -1,0 +1,22 @@
+$def with (form)
+<html>
+<head>
+        <title>Formularios en Web</title>
+        <link href="static/css/estilo1.css" media="screen" rel="StyleSheet" type="text/css">
+    </head>
+    <body>
+
+<form name="main" method="post" > 
+<center>
+    
+$:form.render()
+
+
+<label> El Usuario y/o Password son Incorrectos</label>
+</center>
+<input  type="submit"  id="boton" value="Iniciar Sesion">   
+
+
+ </form>
+    </body>
+</html>

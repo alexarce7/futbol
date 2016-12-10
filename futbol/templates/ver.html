@@ -1,0 +1,52 @@
+$def with (result)
+
+<html>
+<head>   
+    
+    <link href="../static/css/ver.css" media="screen" rel="StyleSheet" type="text/css">
+    <title>Personaje</title>
+</head>
+
+    <body class="body">
+        <form name="main" method="post" class="form"> 
+        $for row in result:
+        
+        <center>
+            <h1 style="bold" aria-setsize="15px"><font size="15px" color= "white">$row.nombre_eq</font></h1>
+        </center>
+     
+              <center>
+           
+            <table CELLSPACING="10" WIDTH="400"  >
+                <TH COLSPAN=2 > Detalles del Equipo</TH>
+                <tr>
+                    <td > Equipo  </td>
+                <td>$row.nombre_eq</td>
+                </tr>
+                <tr>
+                    <td>PJ</td>
+                <td>$row.partidosj</td>
+                </tr>
+                <tr>
+                    <td>Pts </td>
+                <td>$row.puntos</td>
+                </tr>
+                <tr>
+                    <td>TG</font> </td>
+                <td>$row.tgoles</font></td>
+                </tr>
+                <tr>
+                    <td>GF </td>
+                <td>$row.golesf</td>
+                </tr>
+                <tr>
+                    <td>GC </td>
+                <td>$row.golesc</td>
+                </tr>
+                
+            </table>
+      </center>
+        
+        </form>
+</body>
+</html>
